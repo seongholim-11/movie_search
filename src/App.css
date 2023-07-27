@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Lilita One", cursive;
+}
+
+.App{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: rgb(14, 155, 28);
+  }
+
+  .swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: rgb(14, 155, 28);;
+  }
