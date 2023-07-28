@@ -1,18 +1,24 @@
 import React, { useState } from 'react'
+import { useSelector, useDispatch  } from 'react-redux';
+import { encodingTitle } from '../../modules/searchInput';
+import { useNavigate } from "react-router-dom";
 
 
 
 const SearchInput = () => {
     const [movieTitle, setMovieTitle] =useState("");
-    const [encodingTitle, setEncodingTitle] =useState("");
+
+    const dispatch = useDispatch()
+    const navigate = useNavigate();
     
     const onSubmit = (e) => {
         setMovieTitle("")
         e.preventDefault();
-        setEncodingTitle(encodeURIComponent(movieTitle));
+        const newTitle = encodeURIComponent(movieTitle)
+        dispatch(encodingTitle(newTitle));
+        navigate('/search')
       }
-      console.log("🚀 ~ file: SearchInput.jsx:8 ~ SearchInput ~ encodingTitle:", encodingTitle)
-
+      
   return (
     <form onSubmit={onSubmit}>
         <input type="text" placeholder='검색할 영화 제목을 입력해주세요' value={movieTitle} onChange={(e) => setMovieTitle(e.target.value)}/>

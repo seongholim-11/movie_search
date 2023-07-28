@@ -9,7 +9,7 @@ export const CALL_API = 'counter/CALL_API';
 
 export const callapi = (value) => {
     return {
-      type: 'CALL_API',
+      type: CALL_API,
       payload: value,
     };
   };
@@ -23,7 +23,7 @@ const initialState = {
 
 // -----------------------리듀서 작성------------------------
 
-function saveApi(state = initialState, action) {
+function searchReducer(state = initialState, action) {
   switch (action.type) {
     case CALL_API:
       return {
@@ -35,5 +35,5 @@ function saveApi(state = initialState, action) {
   }
 }
 
-export default saveApi;
+export default searchReducer;
 // 규칙 1번에 따르면 reducer로 내보내야 하지만, 이 경우 import 하는 곳에서 항상 as 문법을 이용해야 하므로 위와 같이 처리했다.

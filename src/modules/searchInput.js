@@ -1,0 +1,37 @@
+// module/searchInput.js
+
+// ----------------------액션 타입 작성----------------------
+
+export const ENCODING_TITLE = "searchInput/ENCODING_TITLE";
+// 규칙 2번 참고
+
+// ----------------------액션 함수 작성----------------------
+
+export const encodingTitle = value => {
+    return {
+        type: ENCODING_TITLE,
+        payload : value
+    };
+};
+
+// ----------------------초기 상태 작성----------------------
+
+const initialState = {
+    encodingTitle: '',
+};
+
+// -----------------------리듀서 작성------------------------
+
+const ecodingReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case ENCODING_TITLE:
+            return {
+                ...state,
+                encodingTitle: action.payload,
+            };
+        default:
+            return state;
+    }
+};
+export default ecodingReducer;
+// 규칙 1번에 따르면 reducer로 내보내야 하지만, 이 경우 import 하는 곳에서 항상 as 문법을 이용해야 하므로 위와 같이 처리했다.
