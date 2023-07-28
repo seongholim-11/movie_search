@@ -10,8 +10,8 @@ const SearchInput = () => {
         setMovieTitle("")
         e.preventDefault();
         setEncodingTitle(encodeURIComponent(movieTitle));
-        console.log("🚀 ~ file: SearchInput.jsx:8 ~ SearchInput ~ encodingTitle:", encodingTitle)
-    }
+      }
+      console.log("🚀 ~ file: SearchInput.jsx:8 ~ SearchInput ~ encodingTitle:", encodingTitle)
 
   return (
     <form onSubmit={onSubmit}>
