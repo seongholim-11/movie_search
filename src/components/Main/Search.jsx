@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from "react";
 import axios from "axios";
 import { useSelector } from 'react-redux';
@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 const Search = () => {
     const IMG_BASE_URL = "http://image.tmdb.org/t/p/w1280";
     const newencodingTitle = useSelector((state) => state.ecodingReducer.encodingTitle)
-    console.log("🚀 ~ file: Search.jsx:9 ~ Search ~ newencodingTitle:", newencodingTitle)
+    const [movieDetail, setMovieDetail] = useState([])
 
     const getMovies = async () => {
         await axios
@@ -16,6 +16,7 @@ const Search = () => {
             .then((response) => {
                 // 요청 성공 시의 처리
                 console.log("응답 데이터:", response.data.results);
+                setMovieDetail(response.data.results)
             })
             .catch((error) => {
                 console.error("오류 발생:", error);
@@ -26,6 +27,7 @@ const Search = () => {
       getMovies();
     }, []);
 
+    console.log(movieDetail)
     return (
     <div>Search</div>
   )
