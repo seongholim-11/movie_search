@@ -5,7 +5,6 @@ import SearchInput from "../components/Main/SearchInput";
 import styled from "styled-components";
 
 import bg from "../assets/theater_bg.jpeg";
-import earth from "../assets/production.mp4";
 
 const MainBg = styled.div`
     width: 100vw;
