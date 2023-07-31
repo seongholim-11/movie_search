@@ -12,7 +12,7 @@ const Search = () => {
     const getMovies = async () => {
         await axios
             .get(
-                `https://api.themoviedb.org/3/search/movie?api_key=4ed08358326bfbef17487ba953a86239&query=${newencodingTitle}&language=kr-KO`
+                `https://api.themoviedb.org/3/search/movie?api_key=4ed08358326bfbef17487ba953a86239&query=${newencodingTitle}&language=ko-KR`
             )
             .then((response) => {
                 // 요청 성공 시의 처리
@@ -26,7 +26,7 @@ const Search = () => {
 
     useEffect(() => {
       getMovies();
-    }, []);
+    }, [newencodingTitle]);
 
     console.log(movieDetail)
     return (
