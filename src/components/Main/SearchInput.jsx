@@ -22,6 +22,7 @@ const InputWrap = styled.div`
       top: 50%; right: 0;
       transform: translateY(-50%);
       font-size: 20px;
+      padding-right: 20px;
     }
   }
 `
@@ -57,7 +58,7 @@ const SearchInput = () => {
         <form onSubmit={onSubmit}>
             <div className='form'>
               <InputStyle><input type="text" placeholder='검색할 영화 제목을 입력해주세요' value={movieTitle} onChange={(e) => setMovieTitle(e.target.value)}/></InputStyle>
-              <input type="submit" value="🔎" className='submit'/>
+              <input type="submit" value="Search" className='submit'/>
             </div>
         </form>
       </InputWrap>
