@@ -4,13 +4,12 @@ import Seat from "../components/Beginning/Seat";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import bg from "../assets/begin_bg.png";
+import bg from "../assets/space.mp4";
 
-const BeginningDesign = styled.div`
+const BeginningDesign = styled.video`
     width: 100vw;
     height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+    object-fit: cover;
 `;
 
 const Wrap = styled.div`
@@ -36,7 +35,10 @@ const Wrapseat = styled.div`
 
 const Beginning = () => {
     return (
-        <BeginningDesign style={{ backgroundImage: `url(${bg})` }}>
+        <div>
+            <BeginningDesign muted autoPlay loop>
+                <source src={bg} type="video/mp4" />
+            </BeginningDesign>
             <Wrap>
                 <Link to="/main">
                     <Screen />
@@ -78,7 +80,7 @@ const Beginning = () => {
                     <Seat />
                 </Wrapseat>
             </Wrap>
-        </BeginningDesign>
+        </div>
     );
 };
 
