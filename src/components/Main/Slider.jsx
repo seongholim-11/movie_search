@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 import "../../App.css";
 import styled from "styled-components";
@@ -20,7 +20,7 @@ const ImgWrap = styled.div`
     transition: 0.5s;
     overflow: hidden;
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         &::after {
             content: "";
             width: 100%;
@@ -32,16 +32,24 @@ const ImgWrap = styled.div`
         }
     }
     .movieInfo {
-        display: none;
-        color: #fff;
-    }
-    &:hover .movieInfo {
-        display: block;
+        opacity: 0;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 3;
+        color: #fff;
+        transition: 0.8s;
+        .movieTile{
+            font-size: 20px;
+        }
+        .movieRelease{
+            font-size: 12px;
+        }
+
+    }
+    &:hover .movieInfo {
+        opacity: 1;
     }
 `;
 
@@ -88,7 +96,7 @@ const Slider = () => {
                     loop={true}
                     navigation={true}
                     slidesPerView={3}
-                    spaceBetween={30}
+                    spaceBetween={0}
                     modules={[Pagination, Navigation]}
                     className="mySwiper"
                     style={{ margin: "0", width: "100%" }}
@@ -99,7 +107,8 @@ const Slider = () => {
                             style={{
                                 userSelect: "none",
                                 boxSizing: "border-box",
-                                padding: "50px 30px",
+                                padding: "20px 20px",
+                                
                             }}
                         >
                             <ImgWrap>
@@ -110,13 +119,12 @@ const Slider = () => {
                                     }
                                     alt="poster"
                                     className="movieImg"
-                                    style={{}}
                                 />
                                 <div className="movieInfo">
-                                    <h1 className="movieTile">{item.title}</h1>
-                                    <h2 className="movieRelease">
+                                    <div className="movieTile">{item.title}</div>
+                                    <div className="movieRelease">
                                         {item.release_date}
-                                    </h2>
+                                    </div>
                                 </div>
                             </ImgWrap>
                         </SwiperSlide>
