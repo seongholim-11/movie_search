@@ -103,7 +103,7 @@ const Slider = () => {
                 >
                     {moviePoster.map((item, idx) => (
                         <SwiperSlide
-                            key={item.id}
+                            key={item.id} 
                             style={{
                                 userSelect: "none",
                                 boxSizing: "border-box",
