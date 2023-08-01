@@ -1,5 +1,4 @@
 {
-  "homepage": "https://seongholim-11.github.io/movie_search/",
   "name": "mlog",
   "version": "0.1.0",
   "private": true,
@@ -46,5 +45,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://seongholim-11.github.io/movie_search/"
 }
