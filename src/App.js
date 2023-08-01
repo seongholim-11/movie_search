@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='App'>
       <Routes>
-        <Route path='/' element={<Beginning/>}/>
+        <Route path={process.env.PUBLIC_URL + '/'} element={<Beginning/>}/>
         <Route path='/main' element={<Main/>}/>
       </Routes>
     </div>
