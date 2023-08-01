@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/movie_search/static/css/main.7eea815f.css",
+    "main.js": "/movie_search/static/js/main.0f0d276a.js",
+    "static/media/space.mp4": "/movie_search/static/media/space.a0c4a54746c6544d7099.mp4",
+    "static/media/theater_bg.jpeg": "/movie_search/static/media/theater_bg.bf88ccc0c6a93abeed18.jpeg",
+    "static/media/solar.jpg": "/movie_search/static/media/solar.b51bb7fbd8a4ed1336d7.jpg",
+    "static/media/stars.jpg": "/movie_search/static/media/stars.b769eba8b486833cd881.jpg",
+    "static/media/galaxy.jpg": "/movie_search/static/media/galaxy.c12332855e2b5da91781.jpg",
+    "static/media/earth.jpg": "/movie_search/static/media/earth.ce587a96c4e98b9ea831.jpg",
+    "static/media/wormhole.jpg": "/movie_search/static/media/wormhole.2a956ddf14d5403db3a5.jpg",
+    "index.html": "/movie_search/index.html",
+    "main.7eea815f.css.map": "/movie_search/static/css/main.7eea815f.css.map",
+    "main.0f0d276a.js.map": "/movie_search/static/js/main.0f0d276a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7eea815f.css",
+    "static/js/main.0f0d276a.js"
+  ]
+}
