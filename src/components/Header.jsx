@@ -7,7 +7,7 @@ const HeaderStyle = styled.div`
     align-items: center;
     width: 100%;
     height: 70px;
-    font-size: 20px;
+    font-size: 1vw;
     padding: 10px 40px;
     box-sizing: border-box;
     background: rgba(255, 255, 255);
